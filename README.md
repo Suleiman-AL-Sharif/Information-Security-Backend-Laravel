@@ -1,68 +1,45 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+الهدف في هذا المشروع تطبيق الخوارزميات المشروحة ضمن Backend فلم يتم مراعاة جمالية تصميم الواجهات بشكل مثالي
+هو عبارة عن تطبيق ويب مكتوب باستعمال 
+Backend Laravel
+Frontend Flutter
+المرحلة الأولى 
+يستطيع كل مستخدم انشاء حساب له على السيرفر ويستطيع تسجيل الدخول وعندما يتم تسجيل الدحول يتم ارسال رسالة من السيرفر الى ايميل المستخدم الذي قام بتسجيل الدخول بنجاح التسجيل
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# consulting_app
-# test
+في التشفير المتماثل تستخدم الشفرات نفس المفتاح للتشفير وفك التشفير، لذلك يجب على المرسل والمستقبل استخدام نفس المفتاح السري.
+المرحلة الثانية
+الهدف في هذه المرحلة هو المحافظة على سرية المعلومات في الشبكة Confidentiality
+وذلك عن طريق التشفير المتناظر حيث نفترض أن المخدم والعميل متفقان مسبقا على مفتاح التشفير المتناظر من الممكن أن يكون الرقم الوطني للعميل حيث يكون محتوى البيانات المرسلة هو استكمال المعلومات الإدارية الخاصة بالعميل رقم الهاتف – رقم الموبايل - مكان السكن- الخ
+المرحلة الثالثة
+الهدف في هذه المرحلة هو المحافظة على سرية المعلومات باستخدام التشفير الهجين PGP
+يتم توليد keys private-public خاصة بالعميل والسيرفر فقط عند أول محاولة 
+اتصال ألي منهما ويتم تخزين تلك المفاتيح لكل طرف عنده.
+تنفيذ handshaking بين السيرفر والعميل عند كل اتصال، يتم فيها تبادل مفاتيح 
+الـ key public المطلوبة
+يقوم العميل بتوليد الـ key session وإرساله للمخدم باستخدام PGP، وعلى 
+يدل على وصول مفتاح الجلسة إليه وموافقته عليه.
+المخدم أن يرجع للعميل رداً
+بعد الاتفاق على key session, يتم تشفير الـ request والـ response ضمن 
+الجلسة الحالية باستخدام مفتاح الجلسة.
+يقوم السيرفر بحفظ الـ keys public الخاصة بالعملاء الذين يسمح لهم بالولوج 
+الى النظام الجامعي
+ملاحظة: مفتاح الجلسة هو مفتاح التشفير المتناظر ويتم تغييره في كل جلسة اي اتصال
+ملاحظة: يمكن للطالب إرسال قائمة توصيف عن المشاريع العملية المنجزة من قبل العميل
+ويرسل المخدم رسالة تأكيد وصول المعلومات.
+المرحلة الرابعة
+الهدف في هذه المرحلة هو استخدام الدكتور الجامعي فقط للتوقيع الرقمي Digital Signature لغرض:
+سلامة البيانات Integrity Data ولضمان أن البيانات لم يتم تعديلها خلال الشبكة
+عدم النكران Repudiation-Non وذلك لإثبات أن المستخدم قام فعلا بإرسال
+إثبات أن السيرفر قام فعلا بتأكيد وصول قائمة علامات مادة معينة في وقت معين، و
+القائمة و توليد وإرسال ID معرف لتخزين تلك القائمة لديه في وقت معين.
+المرحلة الخامسة
+الهدف من المرحلة الخامسة هو ما يلي:
+التأكد من أن الدكتور الجامعي الذي يتم التواصل معه هو فعلا الكيان المراد التواصل معه وذلك باستخدام Certificate Signed خاصة بالدكتور الجامعي من قبل CA موثوق مسبقا رئاسة جامعة دمشق.
+يقوم الدكتور الجامعي بتوليد CSR وإرساله إلى الـ CA
+يقوم الـ CA بالتحقق من هوية الدكتور وارتباطه بالـ Key Public الموجود في الـ CSR حيث يطلب منه حل معادلة رياضية معينة للتأكد من هويته.
+في حال نجاح عملية التحقق يقوم الـ CA بإرسال الشهادة الرقمية لمقدم 
+الطلب، يتحتم على الدكتور بعدها استخدامها عند كل عملية اتصال لإثبات 
+صحة الـ Key Public الخاص به.
+التأكد من أن العميل الذي يتم التواصل معه هو فعلا العميل المراد التواصل معه وإمكانية تطبيق Authentication والـ Authorization عن طريق شهادات 
+رقمية خاصة بالعملاء Certificate Client يتم إنشاؤها بخطوات شبيهة لما سبق 
+حيث من الممكن أن تحدد الـ Certificate Client صلاحيات العميل على 
+السيرفر من حيث قراءة قائمة عالمات معينة
